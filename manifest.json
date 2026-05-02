@@ -1,0 +1,97 @@
+{
+  "id": "tide_times",
+  "name": "Tide Times",
+  "version": "0.1.0",
+  "description": "Display today's high and low tide predictions for any NOAA tide gauge station.",
+  "author": "FiestaBoard Team",
+  "icon": "waves",
+  "category": "weather",
+  "repository": "https://github.com/Fiestaboard/fiestaboard-plugin--tide-times",
+  "documentation": "README.md",
+  "min_refresh_seconds": 1800,
+  "settings_schema": {
+    "type": "object",
+    "properties": {
+      "enabled": {
+        "type": "boolean",
+        "title": "Enabled",
+        "default": false
+      },
+      "station_id": {
+        "type": "string",
+        "title": "Station ID",
+        "description": "NOAA tide gauge station ID (e.g. 9414290 for San Francisco).",
+        "default": "9414290"
+      },
+      "units": {
+        "type": "string",
+        "title": "Units",
+        "description": "Measurement units.",
+        "enum": [
+          "english",
+          "metric"
+        ],
+        "default": "english"
+      },
+      "refresh_seconds": {
+        "type": "integer",
+        "title": "Refresh Interval (seconds)",
+        "description": "How often to fetch tide predictions.",
+        "default": 1800,
+        "minimum": 1800
+      }
+    },
+    "required": [
+      "station_id"
+    ]
+  },
+  "variables": {
+    "groups": {
+      "next_tide": {
+        "label": "Next Tide"
+      },
+      "tides": {
+        "label": "Today's Tides"
+      }
+    },
+    "simple": {
+      "next_type": {
+        "description": "Next tide type (High or Low)",
+        "type": "string",
+        "max_length": 4,
+        "group": "next_tide",
+        "example": "High"
+      },
+      "next_time": {
+        "description": "Time of the next tide",
+        "type": "string",
+        "max_length": 10,
+        "group": "next_tide",
+        "example": "2:45 PM"
+      },
+      "next_height": {
+        "description": "Height of the next tide (ft or m)",
+        "type": "string",
+        "max_length": 8,
+        "group": "next_tide",
+        "example": "5.4 ft"
+      },
+      "station_name": {
+        "description": "Station name",
+        "type": "string",
+        "max_length": 20,
+        "group": "tides",
+        "example": "San Francisco, CA"
+      }
+    }
+  },
+  "screenshots": [
+    {
+      "src": "docs/board-display.png",
+      "alt": "Tide Times displayed on a Vestaboard",
+      "caption": "Example board output using the default template",
+      "primary": true
+    }
+  ],
+  "api_docs": "https://api.tidesandcurrents.noaa.gov/api/prod/"
+}

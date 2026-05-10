@@ -1,7 +1,7 @@
 {
   "id": "tide_times",
   "name": "Tide Times",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Display today's high and low tide predictions for any NOAA tide gauge station.",
   "author": "FiestaBoard Team",
   "icon": "waves",
@@ -93,5 +93,49 @@
       "primary": true
     }
   ],
-  "api_docs": "https://api.tidesandcurrents.noaa.gov/api/prod/"
+  "api_docs": "https://api.tidesandcurrents.noaa.gov/api/prod/",
+  "demo": {
+    "name": "Tide Times Demo",
+    "device_type": "flagship",
+    "config": {
+      "enabled": true,
+      "station_id": "9414290",
+      "units": "english",
+      "refresh_seconds": 1800
+    },
+    "template": [
+      "Tide Times",
+      "{{tide_times.station_name}}",
+      "",
+      "Next: {{tide_times.next_type}} tide",
+      "Time:   {{tide_times.next_time}}",
+      "Height: {{tide_times.next_height}}"
+    ],
+    "line_metadata": [
+      {
+        "alignment": "center",
+        "wrap": false
+      },
+      {
+        "alignment": "center",
+        "wrap": false
+      },
+      {
+        "alignment": "left",
+        "wrap": false
+      },
+      {
+        "alignment": "left",
+        "wrap": false
+      },
+      {
+        "alignment": "left",
+        "wrap": false
+      },
+      {
+        "alignment": "left",
+        "wrap": false
+      }
+    ]
+  }
 }

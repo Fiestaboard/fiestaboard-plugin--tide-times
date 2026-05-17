@@ -1,7 +1,7 @@
 {
   "id": "tide_times",
   "name": "Tide Times",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Display today's high and low tide predictions for any NOAA tide gauge station.",
   "author": "FiestaBoard Team",
   "icon": "waves",

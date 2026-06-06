@@ -81,7 +81,7 @@ class TideTimesPlugin(PluginBase):
             next_height = f"{height} {unit_label}"
 
             station_info = data.get("metadata", {})
-            station_name = str(station_info.get("name", station_id))[:20]
+            station_name = str(station_info.get("name", station_id))
 
             return PluginResult(
                 available=True,

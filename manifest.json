@@ -93,6 +93,28 @@
       "primary": true
     }
   ],
+  "teaser": "HIGH TIDE 2:45",
+  "previews": [
+    {
+      "device_type": "flagship",
+      "rows": [
+        "      Tide Times",
+        "  San Francisco, CA",
+        "",
+        "Next: High tide",
+        "Time:   2:45 PM",
+        "Height: 5.4 ft"
+      ]
+    },
+    {
+      "device_type": "note",
+      "rows": [
+        "TIDE TIMES",
+        "High TIDE",
+        "2:45 PM"
+      ]
+    }
+  ],
   "api_docs": "https://api.tidesandcurrents.noaa.gov/api/prod/",
   "demo": {
     "flagship": {

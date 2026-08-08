@@ -109,9 +109,9 @@
     {
       "device_type": "note",
       "rows": [
-        "TIDE TIMES",
-        "High TIDE",
-        "2:45 PM"
+        "{67}{67} TIDE TIMES",
+        "HIGH 2:45 PM",
+        "LOW  8:52 AM"
       ]
     }
   ],
